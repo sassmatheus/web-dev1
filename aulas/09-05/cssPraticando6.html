@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Praticando 6</title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+        table, td{
+            border: solid 1px red;
+        }
+        #t1 td{
+            padding: 30px 60px;
+            text-align: center;
+        }
+        .row1{
+            background-color: green;
+        }
+        .row2{
+            background-color: red;
+        }
+        .row3{
+            background-color: blue;
+        }
+        .row4{
+            background-color: yellow;
+        }
+        
+        #t2{
+            background-color: white;
+        }
+        #t2 td{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Praticando 6</h1>
+    <h2><a href="index.html">Voltar ao menu principal</a></h2>
+      
+        <table id="t1">
+            <caption>Tabela grande com colspan e rowspan</caption>
+            <tr class="row1">
+                <td colspan="2">Colspan</td>
+                <td>-</td>
+                <td rowspan="3">Rowspan</td> 
+            </tr>
+            <tr class="row2">
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="row3">
+                <td>-</td>
+                <td colspan="2">Colspan</td>   
+            </tr>
+            <tr class="row4">
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </table>
+    <br><br>
+    <table id="t2">
+        <caption>Legenda</caption>
+        <tr>
+            <td>Linha 1</td>
+            <td class="row1">--------</td>
+            <td>green</td>
+        </tr>
+        <tr>
+            <td>Linha 2</td>
+            <td class="row2">--------</td>
+            <td>red</td>
+        </tr>
+        <tr>
+            <td>Linha 3</td>
+            <td class="row3">--------</td>
+            <td>blue</td>
+        </tr>
+        <tr>
+            <td>Linha 4</td>
+            <td class="row4">--------</td>
+            <td>yellow</td>
+        </tr>
+    </table>
+</body>
+</html>
