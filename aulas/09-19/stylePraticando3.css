@@ -66,17 +66,38 @@ span{
     background-color: lightblue;
 }
 .ff1{
-    font-family: "Sofia", sans-serif;
+    font-family: 'Sofia', sans-serif;
 }
 .ff2{
-    font-family: "Trirong", serif;
+    font-family: 'Trirong', sans-serif;
 }
 .ff3{
-    font-family: "Audiowide", sans-serif;
+    font-family: 'Audiowide', sans-serif;
 }
 .ff4{
     font-family: 'Oswald', sans-serif;
 }
 .ff5{
-    font-family: '';
+    font-family: 'Silkscreen', sans-serif;
+}
+.fstyle{
+    font-style: italic;
+}
+.fw{
+    font-weight: 900;
+}
+.fsize1{
+    font-size: 13px;
+}
+.fsize2{
+    font-size: 18px;
+}
+.fsize3{
+    font-size: 23px;
+}
+.fsize4{
+    font-size: 28px;
+}
+.fsize5{
+    font-size: 33px;
 }
