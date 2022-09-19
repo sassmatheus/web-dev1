@@ -1,0 +1,82 @@
+.parte1{
+    background-color: lightgreen;
+}
+h2{
+    text-align: center;
+}
+.propriedade{
+    border: 2px solid black;
+}
+.propriedade:hover{
+    background-color: pink;
+    border: 4px solid red;
+}
+.definicao{
+    background-color: white;
+    font-weight: bold;
+}
+span{
+    background-color: yellow;
+}
+.p1{
+    color: blue;
+}
+.p2{
+    color: darkorchid;
+}
+.p3{
+    color: darkorange;
+}
+
+.a1{
+    text-align: justify;
+}
+.a2{
+    text-align: center;
+}
+.a3{
+    text-align: right;
+}
+.a4{
+    text-align: left;
+}
+.td1{
+    text-decoration: line-through;
+}
+.td2{
+    text-decoration: underline;
+}
+.tt1{
+    text-transform: capitalize;
+}
+.tt2{
+    text-transform: uppercase;
+}
+.ti1{
+    text-indent: 150px;
+}
+.ti2{
+    text-indent: 400px;
+}
+.lh1{
+    line-height: 13px;
+}
+
+.parte2{
+    background-color: lightblue;
+}
+.ff1{
+    font-family: "Sofia", sans-serif;
+}
+.ff2{
+    font-family: "Trirong", serif;
+}
+.ff3{
+    font-family: "Audiowide", sans-serif;
+}
+.ff4{
+    font-family: 'Oswald', sans-serif;
+}
+.ff5{
+    font-family: '';
+}
