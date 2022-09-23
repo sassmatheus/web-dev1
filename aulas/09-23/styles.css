@@ -1,0 +1,30 @@
+.borda1{
+    background-color: lightgreen;
+    border: 10px dotted green;
+}
+.borda2{
+    background-color: lightgray;
+    border: 10px double grey;
+}
+.borda3{
+    background-color: rgb(214, 97, 97);
+    border: 10px dashed red;
+}
+.borda4{
+    background-color: lightblue;
+    border: 10px solid blue;
+}
+.textoTart{
+    border-left: 10px solid coral;
+    background-color: lightblue;
+    padding: 10px;
+    text-align: justify;
+}
+.tart{
+    border: 7px dotted purple;
+    margin: 2%;
+    margin-left: 2%;
+}
+.imgTart{
+    border: 10px double violet;
+}
