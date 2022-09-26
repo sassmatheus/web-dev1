@@ -1,0 +1,100 @@
+.praticando1{
+    background-color: lightblue;
+}
+.praticando1 h2{
+    text-align: center;
+}
+.secao1{
+    background-color: white;
+    border: 1vw solid black;
+    font-size: 2vw;
+    width: 65%;
+}
+.secao2{
+    background-color: white;
+    border: 8px solid black;
+    font-size: 20pt;
+    width: 1000px;
+}
+
+
+
+.praticando2{
+    background-image: url(images/fundo.png);
+}
+.praticando2 h1{
+    background-color: white;
+    border-radius: 3px;
+    width: fit-content;
+    padding: 3px;
+}
+.praticando2 h2{
+    font-family: 'Harlow solid', sans-serif;
+    font-size: 24pt;
+}
+.praticando2 p{
+    background-color: white;
+    border-radius: 3px;
+    width: fit-content;
+    padding: 3px;
+}
+.lhama1{
+    background-color: lightgreen;
+    border-top: 15px solid white;
+    border-bottom: 15px solid white;
+    padding: 10px;
+    width: fit-content;
+}
+.lhama2{
+    background-color: palevioletred;
+    border-top: 15px solid white;
+    border-bottom: 15px solid white;
+    margin-top: 15px;
+    padding: 10px;
+    width: fit-content;
+}
+
+
+
+.praticando3{
+    background-color: lightgray;
+    text-align: justify;
+}
+.praticando3 h1{
+    border-bottom: 10px double grey;
+    font-size: 3vw;
+}
+.praticando3 div{
+    color: white;
+    border: 5px solid black;
+    border-radius: 15px;
+}
+.div1{
+    background-color: blue;
+    margin-left: 15%;
+    margin-right: 5%; 
+    margin-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 13%;
+}
+.div2{
+    background-color: red;
+    margin-left: 5%;
+    margin-right: 15%;
+    padding-left: 13%;
+    padding-right: 3%;
+}
+.span1{
+    color: darkblue;
+    background-color: violet;
+    border: 3px solid green;
+    border-left: 7px solid green;
+    border-right: 7px solid green; 
+}
+.span2{
+    color: darkred;
+    background-color: lightblue;
+    border: 3px solid yellow;
+    border-left: 7px solid yellow;
+    border-right: 7px solid yellow; 
+}
