@@ -1,0 +1,33 @@
+.opacidades{
+    display: flex;
+}
+
+img{
+    margin: 10px 0px 10px 10px;
+    width: 219px;
+    border: 1px solid black;
+    opacity: 0.6;
+}
+img:hover{
+    opacity: 1.0;
+}
+
+.opacidades div{
+    border: 10px solid navy;
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+}
+.opac1{
+    opacity: 1.0;
+}
+.opac2{
+    opacity: 0.8;
+}
+.opac3{
+    opacity: 0.6;
+}
+.opac4{
+    opacity: 0.2;
+}

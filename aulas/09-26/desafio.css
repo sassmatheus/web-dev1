@@ -1,0 +1,14 @@
+div{
+    display: flex;
+    margin: 5px;
+    border-radius: 10px;
+}
+#circulo{
+    background-color: red;
+    border-radius: 100%;
+}
+div:not(.linha){
+    background-color: green;
+    width: 100px;
+    height: 100px;
+}

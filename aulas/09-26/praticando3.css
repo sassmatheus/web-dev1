@@ -1,0 +1,19 @@
+div{
+    display: flex;
+    margin: 10px;
+}
+div:not(.linha1, .linha2, .linha3){
+    background-color: green;
+}
+.linha1 div{
+    width: 70px;
+    height: 70px;
+}
+.linha2 div{
+    width: 250px;
+    height: 70px;
+}
+.linha3 div{
+    width: 70px;
+    height: 250px;
+}
