@@ -1,0 +1,62 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    background-color: rgb(178, 245, 182);
+    border-bottom: 3px solid rgb(14, 165, 25);
+    border-top: 20px solid white;
+    padding: 10px 50px 0px 10px;
+    font-size: 16pt;
+}
+
+h2{
+    font-weight: lighter;
+    margin-left: 20px;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.corpo{
+    display: flex;
+}
+
+.caixas{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: larger;
+    width: 70%;
+    border-right: 3px solid rgb(14, 165, 25);
+}
+.caixas > div{
+    border: 1px solid black;
+    width: 150px;
+    height: 100px;
+    margin: 20px;
+    text-align: center;
+}
+
+.lateral{
+    width: 30%;
+    text-align: justify;
+    padding: 5px;
+    margin-left: 20px;
+    margin-right: 20px;    
+}
+.lateral > p{
+    text-indent: 2em;
+}
+.boxTitle{
+    text-align: center;
+}
+
+footer{
+    background-color: rgb(178, 245, 182);
+    border-top: 3px solid rgb(14, 165, 25);
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
