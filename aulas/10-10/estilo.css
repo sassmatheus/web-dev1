@@ -4,9 +4,14 @@ body{
 header{
     background-color: rgb(178, 245, 182);
     border-bottom: 3px solid rgb(14, 165, 25);
-    border-top: 20px solid white;
+    margin-top: 10px;
     padding: 10px 50px 0px 10px;
     font-size: 16pt;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
 }
 
 h2{
@@ -14,38 +19,52 @@ h2{
     margin-left: 20px;
 }
 
-ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-}
-
 .corpo{
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 450px;
+}
+
+.corpoTitle{
+    height: fit-content;
 }
 
 .caixas{
     display: flex;
     flex-wrap: wrap;
-    font-size: larger;
+    font-size: small;
     width: 70%;
-    border-right: 3px solid rgb(14, 165, 25);
 }
+
+.one > p, .two > p,
+.three > p, .four > p,
+.five > p, .six > p,
+.seven > p, .eight > p,
+.nine > p, .ten > p{
+    font-size: xx-large;
+    margin: 15px;
+}
+
 .caixas > div{
     border: 1px solid black;
     width: 150px;
     height: 100px;
-    margin: 20px;
+    margin: 5px 10px 5px 10px;
     text-align: center;
 }
 
 .lateral{
-    width: 30%;
+    width: 26%;
+    height: 100%;
+    padding: 0px 20px 0px 20px;
     text-align: justify;
-    padding: 5px;
+    line-height: 30px;
     margin-left: 20px;
-    margin-right: 20px;    
+    margin-right: 20px;
+    border-left: 3px solid rgb(14, 165, 25);
 }
+
 .lateral > p{
     text-indent: 2em;
 }
