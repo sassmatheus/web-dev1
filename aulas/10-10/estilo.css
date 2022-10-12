@@ -27,7 +27,8 @@ h2{
 }
 
 .corpoTitle{
-    height: fit-content;
+    min-width: 200px;
+    max-width: 200px;
 }
 
 .caixas{
@@ -35,22 +36,23 @@ h2{
     flex-wrap: wrap;
     font-size: small;
     width: 70%;
+    min-width: 700px;
 }
 
-.one > p, .two > p,
-.three > p, .four > p,
-.five > p, .six > p,
-.seven > p, .eight > p,
-.nine > p, .ten > p{
+span{
     font-size: xx-large;
-    margin: 15px;
+}
+em{
+    margin-top: 30pt;
 }
 
 .caixas > div{
     border: 1px solid black;
-    width: 150px;
-    height: 100px;
+    min-width: 150px;
+    max-width: 150px;
+    max-height: 100px;
     margin: 5px 10px 5px 10px;
+    padding-top: 20px;
     text-align: center;
 }
 
