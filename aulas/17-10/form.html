@@ -1,13 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário</title>
     <link rel="stylesheet" href="bootstrap.min.css">
 </head>
-<body>
+
+<body class="container w-75 mt-3">
+    <h1>Inscrição - Minicurso</h1>
+    <a href="index.html">Retornar à página inicial</a>
     
+    <form action="" class="mt-3">
+        <div>
+            <div class="input-group">
+                <div class="form-floating">
+                    <input type="text" name="pnome" id="pnome" class="form-control">
+                    <label for="floatingInputGrid">Nome</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" name="snome" id="snome" class="form-control">
+                    <label for="snome">Sobrenome</label>
+                </div>
+            </div>
+            <br>
+            <div class="form-floating">
+                <input type="date" name="nasc" id="nasc" class="form-control">
+                <label for="floatingInputGrid">Data de nascimento</label>
+            </div><br>
+            <div class="form-floating">
+                <input type="email" name="email" id="email" class="form-control" id="floatingInputGrid">
+                <label for="email">Email</label>
+            </div> <br>
+            <div class="form-floating">
+                <input type="tel" name="tel" id="tel" class="form-control" minlength="10" maxlength="11">
+                <label for="tel">Telefone</label>
+            </div>
+            <br>
+            <label for="" name="curso" id="curso" class="form-text">Graduação:</label>
+            <div class="input-group">
+                <span class="input-group-text">Curso e período</span>
+                <select name="curso" id="curso" class="form-select">
+                    <option value="" selected disabled>Selecione o curso</option>
+                    <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+                    <option value="civil">Engenharia Civil</option>
+                    <option value="eletrica">Engenharia Elétrica</option>
+                    <option value="fisica">Física</option>
+                    <option value="bsi">Sistemas de Informação</option>
+                </select>
+                <input type="number" name="periodo" id="periodo" min="1" max="10" class="form-control" placeholder="Período letivo">
+            </div>
+            <br>
+            <label for="" name="doc" id="doc" class="form-text">Documento com foto:</label>
+            <input type="file" name="doc" id="doc" class="form-control">
+            <br>
+            <label for="" name="linkedin" id="linkedin" class="form-text">Linkedin:</label>
+            <input type="url" name="linkedin" class="form-control" placeholder="URL do perfil">
+            <br>
+            <div class="input-group 'row justify-content-evenly">
+                <div class="col-4">
+                    <label for="">Participação:</label> <br>
+                    <input type="radio" name="modalidade" id="online">
+                    <label for="online" name="online" id="online">Online</label> <br>
+                    <input type="radio" name="modalidade" id="presencial">
+                    <label for="presencial" name="presencial" id="presencial">Presencial</label>
+                </div>
+                <div class="col-4">
+                    <label for="horarios">Horários:</label> <br>
+                    <input type="checkbox" name="manha" id="manha">
+                    <label for="manha">Manhã</label> <br>
+                    <input type="checkbox" name="tarde" id="tarde">
+                    <label for="tarde">Tarde</label>
+                </div>
+                <div class="row col-3">
+                    <input class="btn btn-primary mb-2" type="submit" value="Enviar">
+                    <input class="btn btn-outline-danger mb-5" type="reset" value="Limpar">
+                </div>
+            </div>
+            
+        </div>
+    </form>
+
 </body>
+
 </html>
