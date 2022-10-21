@@ -1,4 +1,61 @@
 body{
-    background-image: linear-gradient(to bottom left, rgba(0, 128, 0, 0.842), rgba(0, 0, 255, 0.842));
-    height: 100vh;
+    background-image: linear-gradient(to bottom left, rgba(0, 128, 0, 0.842), rgba(43, 124, 230, 0.822));
+    height: 109vh;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+h1{
+    letter-spacing: 4px;
+    font-size: 27pt;
+    margin-left: 25px;
+}
+form{
+    font-size: 16pt;
+}
+label:not(.langs *, .filmes *){
+    display: inline-block;
+    width: 40%;
+    text-align: right;
+}
+textarea{
+    border-radius: 10px;
+    margin-top: 7px;
+}
+select{
+    width: 177px;
+}
+.webLang{
+    display: flex;
+}
+input[type="radio"]{
+    margin-left: 25px;
+}
+
+.langs{
+    display: flex;
+    align-items: center;
+}
+.filmes{
+    display: flex;
+}
+.labelFilmes{
+    text-align: right;
+    width: 40%;
+}
+.botoes{
+    margin-left: 30%;
+}
+.botao{
+    font-size: 15pt;
+    padding: 5px 15px 5px 15px;
+    margin: 0 15px 0 15px;
+    border-radius: 6px;
+    border: 2px solid black;
+    font-weight: bold;
+}
+.icon{
+    float: right;
+    margin-top: -400px;
+    margin-right: 50px;
 }
