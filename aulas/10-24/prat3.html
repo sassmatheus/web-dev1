@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 3 - 24/10</title>
+    <link rel="stylesheet" href="prat3.css">
+</head>
+<body id="corpo">
+    <h1>Praticando 3 - JavaScript - Cores (click e mouse)</h1>
+    <div id="paleta">
+        <div id="vermelho"></div>
+        <div id="verde"></div>
+        <div id="azul"></div>
+        <div id="amarelo"></div>
+        <div id="rosa"></div>
+    </div>
+    <br>
+    <button id="btnReset">Reset</button>
+    <br><br>
+    <a href="index.html">Voltar à página inicial</a>
+</body>
+<script>
+    var cor = 'white'
+    document.querySelector('div').onmouseleave = () => {
+        document.body.style.backgroundColor = cor
+    }
+    document.getElementById('vermelho').onmouseover = () => {
+        document.body.style.backgroundColor = 'red'
+    }
+    document.getElementById('vermelho').onclick = () => {
+        cor = 'red'
+    }
+
+    document.getElementById('verde').onmouseenter = () => {
+        document.body.style.backgroundColor = 'green'
+    }
+    document.getElementById('verde').onclick = () => {
+        cor = 'green'
+    }
+
+    document.getElementById('azul').onmouseover = () => {
+        document.body.style.backgroundColor = 'blue'
+    }
+    document.getElementById('azul').onclick = () => {
+        cor = 'blue'
+    }
+
+    document.getElementById('amarelo').onmouseover = () =>{
+        document.body.style.backgroundColor = 'yellow'
+    }
+    document.getElementById('amarelo').onclick = () =>{
+        cor = 'yellow'
+    }
+
+    document.getElementById('rosa').onmouseover = () =>{
+        document.body.style.backgroundColor = 'fuchsia'
+    }
+    document.getElementById('rosa').onclick = () =>{
+        cor = 'fuchsia'
+    }
+
+    document.getElementById('btnReset').onclick = () =>{
+        document.body.style.backgroundColor = 'white'
+        cor = 'white'
+    }
+    
+</script>
+</html>

@@ -1,0 +1,24 @@
+#paleta > *{
+    border: 2px solid black;
+    height: 50px;
+    width: 200px;
+}
+#paleta{
+    display: flex;
+}
+
+#vermelho{
+    background-color: red;
+}
+#verde{
+    background-color: green;
+}
+#azul{
+    background-color: blue;
+}   
+#amarelo{
+    background-color: yellow;
+}
+#rosa{
+    background-color: fuchsia;
+}

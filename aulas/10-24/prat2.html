@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Praticando 2 - 24/10</title>
+    <style>
+        body{
+            width: 90%;
+            margin: auto;
+        }
+        .calc{
+            display: flex;
+            align-items: flex-end;
+        }
+        .calc > * {
+            margin-right: -90px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Praticando 2 - JavaScript</h1>
+    <h2>Mini calculadora</h2> <br>
+    <div class="calc" id="calc">
+        <div>
+            <label for="num1">Número 1:</label> <br>
+            <input class="form-control w-50" type="text" name="num1" id="num1">
+        </div>
+        <div>
+            <label for="num2">Número 2:</label> <br>
+            <input class="form-control w-50" type="text" name="num2" id="num2">
+        </div>
+        <div>
+            <label for="resul">Resultado:</label> <br>
+            <input class="form-control w-50" type="text" name="resul" id="resul" disabled>
+        </div>
+        <div class="buttons">
+            <button class="btn btn-primary" id="som">Soma</button>
+            <button class="btn btn-primary" id="sub">Subtração</button>
+            <button class="btn btn-primary" id="mul">Multiplicação</button>
+            <button class="btn btn-primary" id="div">Divisão</button>
+        </div>
+    </div>
+    <br>
+    <a href="index.html">Voltar à página inicial</a>
+</body>
+<script>    
+    document.getElementById('som').onclick = () =>{
+        var n1 = parseFloat(document.getElementById('num1').value)
+        var n2 = parseFloat(document.getElementById('num2').value)
+        document.getElementById('resul').value = n1 + n2
+    }
+    document.getElementById('sub').onclick = () =>{
+        var n1 = parseFloat(document.getElementById('num1').value)
+        var n2 = parseFloat(document.getElementById('num2').value)
+        document.getElementById('resul').value = n1 - n2
+    }
+    document.getElementById('mul').onclick = () =>{
+        var n1 = parseFloat(document.getElementById('num1').value)
+        var n2 = parseFloat(document.getElementById('num2').value)
+        document.getElementById('resul').value = n1 * n2
+    }
+    document.getElementById('div').onclick = () =>{
+        var n1 = parseFloat(document.getElementById('num1').value)
+        var n2 = parseFloat(document.getElementById('num2').value)
+        document.getElementById('resul').value = n1 / n2
+    }
+    
+</script>
+</html>

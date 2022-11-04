@@ -13,7 +13,7 @@
         }
     </style>
 </head>
-<body>
+<body >
     <h1>Praticando 2 - JavaScript parte III</h1>
     <h2>Formulário com validações</h2>
     <form class="row g-3">
@@ -40,10 +40,21 @@
         </div>
         <div class="col-md-5">
           <label for="validationServer04" class="form-label">Marca de carro</label>
-          <input type="text" class="form-control is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
-          <div id="validationServer05Feedback" class="invalid-feedback">
+          <select name="carros" class="form-control is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+            <option value="car0" disabled selected>Selecione</option>
+            <option value="car1">Chevrolet</option>
+            <option value="car2">Fiat</option>
+            <option value="car3">Honda</option>
+            <option value="car4">Toyota</option>
+            <option value="car5">Volkswagen</option>
+          </select>
+          <div id="validationServer04Feedback" class="invalid-feedback">
             Insira uma marca de carro.
           </div>
+        </div>
+        <div class="col-md-10">
+            <label for="validationServer05" class="form-label">Observações: </label>
+            <textarea name="" id="validationServer05" cols="30" rows="2" class="form-control is-invalid" aria-describedby="validationServer03Feedback" required></textarea>
         </div>
         <div>
         </div>
@@ -54,20 +65,28 @@
            <button class="btn btn-warning" type="reset" id="btnReset"> Limpar</button>
         </div>
       </form>
+      <br>
+      <a href="index.html">Voltar à página inicial</a>
 </body>
 <script>
 
-    document.querySelectorAll('.form-control').forEach(input => {
-        input.addEventListener('input', event => {
-            if (input.value !== '') {
-                input.classList.remove('is-invalid')
-                input.classList.add('is-valid')
-            } else {
-                input.classList.remove('is-valid')
-                input.classList.add('is-invalid')
-            }
-        })
+  document.querySelectorAll('.form-control').forEach(input => {
+    input.addEventListener('input', event => {
+      if (input.value == '') {
+        input.classList.add('is-invalid')
+        input.classList.remove('is-valid')
+      } else {
+        input.classList.add('is-valid')
+        input.classList.remove('is-invalid')
+      }
     })
+  })
 
+  document.getElementById('btnReset').onclick = () =>{
+    document.querySelectorAll('.form-control').forEach(click => { 
+      click.classList.add('is-invalid')
+      click.classList.remove('is-valid')
+    })
+  }
 </script>
 </html>
