@@ -26,6 +26,7 @@
         }
         .selecionado{
             margin-left: 30%;
+            position: absolute;
             border: 2px solid yellow;
             order: 2;
         }
@@ -49,22 +50,44 @@
 <script>
     var clicado = document.querySelector('.quadrado');
     var anda = 10;
-    window.addEventListener('load', () => {
-            clicado.style.position = 'relative'
-            clicado.style.left = 0;
-            clicado.style.top = 0;
-        })
+
+    
     document.querySelector('#red').onclick = () =>{ 
         clicado.classList.toggle('selecionado')
-        window.addEventListener('keyup', (k) =>{
+        clicado.style.left = 0;
+        clicado.style.top = 0;
+        if(clicado.classList.contains('selecionado')){
+            andar()
+        }
+    }
+
+    document.querySelector('#blue').onclick = () =>{ 
+        clicado.classList.toggle('selecionado')
+        clicado.style.left = 0;
+        clicado.style.top = 0;
+        if(clicado.classList.contains('selecionado')){
+            andar()
+        }
+    }
+
+    function andar(){
+        window.addEventListener('keydown', (k) =>{
             switch (k.key){
-                case '65':
+                case 'ArrowLeft':
                     clicado.style.left = parseInt(clicado.style.left) - anda + 'px';
-                    break;
+                break;
+                case 'ArrowRight':
+                    clicado.style.left = parseInt(clicado.style.left) + anda + 'px';
+                break;
+                case 'ArrowUp':
+                    clicado.style.top = parseInt(clicado.style.top) - anda + 'px';
+                break;
+                case 'ArrowDown':
+                    clicado.style.top = parseInt(clicado.style.top) + anda + 'px';
+                break;
             }
         })
     }
-    
     
 
 </script>
