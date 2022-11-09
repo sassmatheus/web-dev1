@@ -26,7 +26,7 @@
         }
         .selecionado{
             position: absolute;
-            border: 2px solid yellow;
+            border: 3px solid yellow;
             margin-left: 50%;
             margin-top: 20%;
         }
@@ -49,6 +49,8 @@
         <div class="quadrado b" id="blue"></div>
         <div class="quadrado g" id="green"></div>
     </div>
+    <br>
+    <a href="index.html">Voltar à página inicial</a>
 </body>
 <script>
     var vermelho = document.getElementById('red');
@@ -85,17 +87,21 @@
 
     function andaVermelho(){
         window.addEventListener('keydown', (k) =>{
-            switch (k.key){
+            switch (k.code){
                 case 'ArrowLeft':
+                case 'KeyA':
                     vermelho.style.left = parseInt(vermelho.style.left) - anda + 'px';
                 break;
                 case 'ArrowRight':
+                case 'KeyD':
                     vermelho.style.left = parseInt(vermelho.style.left) + anda + 'px';
                 break;
                 case 'ArrowUp':
+                case 'KeyW':
                     vermelho.style.top = parseInt(vermelho.style.top) - anda + 'px';
                 break;
                 case 'ArrowDown':
+                case 'KeyS':
                     vermelho.style.top = parseInt(vermelho.style.top) + anda + 'px';
                 break;
             }
@@ -104,17 +110,21 @@
 
     function andaAzul(){
         window.addEventListener('keydown', (k) =>{
-            switch (k.key){
+            switch (k.code){
                 case 'ArrowLeft':
+                case 'KeyA':
                     azul.style.left = parseInt(azul.style.left) - anda + 'px';
                 break;
                 case 'ArrowRight':
+                case 'KeyD':
                     azul.style.left = parseInt(azul.style.left) + anda + 'px';
                 break;
                 case 'ArrowUp':
+                case 'KeyW':
                     azul.style.top = parseInt(azul.style.top) - anda + 'px';
                 break;
                 case 'ArrowDown':
+                case 'KeyS':
                     azul.style.top = parseInt(azul.style.top) + anda + 'px';
                 break;
             }
@@ -123,17 +133,21 @@
 
     function andaVerde(){
         window.addEventListener('keydown', (k) =>{
-            switch (k.key){
+            switch (k.code){
                 case 'ArrowLeft':
+                case 'KeyA':
                     verde.style.left = parseInt(verde.style.left) - anda + 'px';
                 break;
                 case 'ArrowRight':
+                case 'KeyD':
                     verde.style.left = parseInt(verde.style.left) + anda + 'px';
                 break;
                 case 'ArrowUp':
+                case 'KeyW':
                     verde.style.top = parseInt(verde.style.top) - anda + 'px';
                 break;
                 case 'ArrowDown':
+                case 'KeyS':
                     verde.style.top = parseInt(verde.style.top) + anda + 'px';
                 break;
             }
