@@ -1,0 +1,106 @@
+header{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    height: 50px;
+}
+
+.listaHeader > li{
+    padding: 2px;
+    padding-bottom: 0;
+}
+
+.listaHeader > li:hover{
+    border-bottom: 2px dotted black;
+    padding-top: 1px;
+}
+
+body{
+    background-color: rgba(223, 223, 223, 0.342);
+    font-family: 'Merriweather', serif;
+    position: relative;
+    min-height: 87vh;
+    padding-bottom: 5rem;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listaHeader > li{
+    margin-left: 15px;
+}
+
+.listaMenu{
+    margin: auto;
+    padding: 0;
+    width: 70%;
+    font-size: larger;
+}
+
+.listaMenu > *{
+    padding: 5px 5px 0 5px;
+    margin-right: 5px;
+    border-bottom: 2px solid transparent;
+}
+.current{
+    font-weight: bold;
+    border-bottom: 2px groove black;
+}
+
+.listaMenu > li:hover:not(.current){
+    border-bottom: 2px dotted black;
+    padding-top: 4px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h2{
+    text-align: center;
+}
+
+.andamento{
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.andamento > *{
+    text-align: center;
+    width: 220px;
+    align-content: center;
+    background-color:white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 7px black;
+}
+.andamento > *:hover{
+    box-shadow: 0 0 11px black;
+}
+
+figure{
+    margin: 0;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    left: 10%;
+    padding-top: 10px;
+    text-align: center;
+    font-family: consolas, monospace;
+    font-size: 11pt;
+    border-top: 1px solid gray;
+}

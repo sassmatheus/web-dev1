@@ -1,0 +1,112 @@
+header{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    height: 50px;
+}
+
+.listaHeader > li{
+    padding: 2px;
+    padding-bottom: 0;
+}
+
+.listaHeader > li:hover:not(.current){
+    border-bottom: 2px dotted black;
+    padding-top: 1px;
+}
+
+body{
+    background-color: rgba(223, 223, 223, 0.342);
+    font-family: 'Merriweather', serif;
+    position: relative;
+    min-height: 87vh;
+    padding-bottom: 5rem;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listaHeader > li{
+    margin-left: 15px;
+}
+
+.listaMenu{
+    margin: auto;
+    padding: 0;
+    width: 70%;
+    font-size: larger;
+}
+
+.listaMenu > *{
+    padding: 5px 5px 0 5px;
+    margin-right: 5px;
+    border-bottom: 2px solid transparent;
+}
+.current{
+    font-weight: bold;
+    border-bottom: 2px groove black;
+}
+
+.listaMenu > li:hover:not(.current){
+    border-bottom: 2px dotted black;
+    padding-top: 4px;
+}
+
+.linkHeader {
+    text-decoration: none;
+}
+
+a{
+    color: black
+}
+
+.corpo{
+    max-width: 700px;
+    margin: auto;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 6px;
+    font-family: Balthazar, serif;
+}
+
+.meio{
+    display: flex;
+    align-items: center;
+}
+
+p{
+    text-align: justify;
+    font-family: consolas;
+    font-size: 18px;
+    margin: 13px;
+}
+p:not(.ola){
+    text-indent: 40px;
+}
+
+.foto{
+    border: 2px solid black;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    left: 10%;
+    padding-top: 10px;
+    text-align: center;
+    font-family: consolas, monospace;
+    font-size: 11pt;
+    border-top: 1px solid gray;
+}
