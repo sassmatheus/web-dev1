@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 0</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+	        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+	        crossorigin="anonymous"></script>
+
+    
+    <h1>Praticando 0 - Vue</h1>
+    <div id="vue"></div>
+
+    
+   
+    <script>
+        const hello = {
+            template: `
+            <h2> {{mensagem}}</h2>
+            <br>
+            <p>Contador de cliques: {{contador}}</p>
+            <button class="vue" @click="somar">Somar</button>
+            <br><br>
+            <div>
+                <input type="text" v-model="meuTexto" placeholder="Digite algo aqui">
+            </div>
+            <p style="font-size: 1em;">{{meuTexto}}</p>
+            <div v-show="meuTexto=='Matheus'">
+                <img width="120" src="https://avatars.githubusercontent.com/u/83067499?v=4" alt="eu">
+            </div>
+            <div>
+                <input type="url" v-model="meuLink" placeholder="Informe uma URL">
+            </div>
+            <p>
+                <a :href="meuLink" target="_blank">{{meuLink}}</a>
+            </p>
+            <div>
+            <h3>Linguagens</h3>
+                <ul>
+                    <li v-for="(value, key) in linguagens">
+                        [{{key}}] - {{value.nome}} (<i>{{value.tipo}}</i>)
+                    </li>
+                </ul>
+            </div>
+            `,
+            data() {
+                return {
+                    mensagem: "Hello World Vue!",
+                    contador: 0,
+                    meuTexto: null,
+                    meuLink: null,
+                    linguagens: [
+                        {nome: "HTML", tipo: "frontend"},
+                        {nome: "CSS", tipo: "frontend"},
+                        {nome: "JavaScript", tipo: "frontend"},
+                        {nome: "JavaScript", tipo: "backend"}
+                    ]
+                }
+            },
+            methods: {
+                somar(){
+                    this.contador++
+                }
+            }
+
+        }
+        Vue.createApp(hello).mount('#vue')
+    </script>
+</body>
+</html>
