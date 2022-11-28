@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando Cores</title>
+    <link rel="stylesheet" href="prat3.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    <h1>Praticando 3 - JavaScript - Cores (click e mouse)</h1>
+    <div id="paleta">
+        <button id="btn-red"></button>
+        <button id="btn-green"></button>
+        <button id="btn-blue"></button>
+        <button id="btn-yellow"></button>
+        <button id="btn-fuchsia"></button>
+    </div>
+    <br>
+    <button id="btnreset">Reset</button>
+    <br><br>
+    <a href="index.html">Voltar à página inicial</a>
+</body>
+<script>
+    var corPadrao = "white";
+        const cores = ['red', 'green', 'blue', 'yellow', 'fuchsia'];
+        for (const cor of cores) {
+            $(`#btn-${cor}`).mouseover(() => {
+                $("body").css("backgroundColor", cor);
+            });
+            $(`#btn-${cor}`).mouseleave(() => {
+                $("body").css("backgroundColor", corPadrao);
+            });
+            $(`#btn-${cor}`).click(() => {
+                corPadrao = cor;
+                $("body").css("backgroundColor", cor);
+            });
+        }
+        $('#btnreset').click(() => {
+            corPadrao = 'white';
+            $("body").css("backgroundColor", 'white');
+        });
+    
+</script>
+</html>

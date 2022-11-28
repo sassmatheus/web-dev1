@@ -1,0 +1,27 @@
+#paleta > *{
+    border: 2px solid black;
+    height: 50px;
+    width: 200px;
+}
+#paleta{
+    display: flex;
+}
+
+#btn-red{
+    background-color: red;
+}
+#btn-green{
+    background-color: green;
+}
+#btn-blue{
+    background-color: blue;
+}   
+#btn-yellow{
+    background-color: yellow;
+}
+#btn-fuchsia{
+    background-color: fuchsia;
+}
+body{
+    background-color: white;
+}

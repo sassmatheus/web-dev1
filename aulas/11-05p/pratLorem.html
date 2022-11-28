@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando Lorem</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <style>
+        .click{
+            width: fit-content;
+            border: 2px solid black;
+            text-align: center;
+            background-color: rgba(211, 211, 211, 0.589);
+            padding: 2px 6px 2px 6px;
+            margin: 15px 0 0 0;
+        }
+        .click:hover{
+            cursor: pointer;
+        }
+        body{
+            text-align: justify;
+            width: 50%;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Praticando 1 - JavaScript</h1>
+    <h2>Seja bem vindo, <span id="nome"></span> </h2>
+    <div class="click" id="adiciona">
+        Adicionar texto(parágrafo de Lorem Ipsum)
+    </div>
+    <div class="click" id="remove">
+        Remover texto (todos os parágrafos)
+    </div>
+    <div id="lorem"></div>
+    <br>
+    <a href="index.html">Voltar à página inicial</a>
+</body>
+<script>
+    $(document).ready(() => {
+        var nome = prompt("Qual seu nome?");
+        $("#nome").text(nome);
+    });
+    $("#adiciona").click(() => {
+        $("#lorem").append(lorem);
+    });
+    $("#remove").click(() => {
+        $("#lorem").empty();
+    });
+
+    let lorem = "<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>"
+</script>
+</html>

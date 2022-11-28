@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando Mini-game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+
+    </script>
+    <style>
+        main div div {
+            width: 50px;
+            height: 150px;
+            margin-right: 15px;
+            border: 3px solid black;
+        }
+        body{
+            margin-left: 50px;
+        }
+        #sq-1{
+            background-color: blue;
+        }
+        #sq-2{
+            background-color: green;
+        }
+        #sq-3{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Praticando 3</h1>
+    <h2>"Mini-game JS"</h2>
+    <h3>Instruções:</h3>
+    <h3>1. Clique em um dos quadrados coloridos</h3>
+    <h3>2. Depois use as teclas W A S D para movimentar os elementos para cima, esquerda, baixo e direita respectivamente.</h3>
+    <img src="wasd.jpg" alt="imagem de teclas de um teclado de computador">
+    <br>
+    <main class="row">
+        <div class="row" id="sq-box">
+            <div class="col-1" id="sq-1"></div>
+            <div class="col-1" id="sq-2"></div>
+            <div class="col-1" id="sq-3"></div>
+        </div>
+    </main>
+    <script>
+        let currentSquareSelected = null;
+        let sqBoxChildLength = $("#sq-box").children.length;
+        for (let i = 0; sqBoxChildLength >= i; i++) {
+            let element = $(`#sq-${i + 1}`);
+            element.click(() => {
+                if (currentSquareSelected != null && currentSquareSelected != `sq-${i}`) {
+                    return alert("Já existe um quadrado selecionado!");
+                } else if (currentSquareSelected == `sq-${i}`) {
+                    setSquareMovableToDefault(element);
+                    currentSquareSelected = null;
+                    element.keydown(() => { });
+                    return null;
+                }
+                currentSquareSelected = `sq-${i}`;
+                setSquareMovableElementStyle(element);
+                $(document).keydown((event) => {
+                    var k = event.keyCode;
+                    movement = {
+                        updown: function () {
+                            var y = parseInt(element.css('top'));
+                            if (k == 38 || k == 87) {
+                                y -= 13;
+                            } else if (k == 40 || k == 83) {
+                                y += 13;
+                            }
+                            return y + "px";
+                        },
+                        leftright: function () {
+                            var x = parseInt(element.css('left'));
+                            if (k == 37 || k == 65) {
+                                x -= 13;
+                            } else if (k == 39 || k == 68) {
+                                x += 13;
+                            }
+                            return x + "px";
+                        }
+                    };
+                    element.css({ "top": movement.updown(), "left": movement.leftright() });
+                });
+            });
+        }
+        function setSquareMovableToDefault(element) {
+            element.css({ "borderColor": "black", "position": "static" });
+        }
+
+        function setSquareMovableElementStyle(element) {
+            element.css({
+                "borderColor": "yellow",
+                "position": "absolute",
+                "left": "50%",
+                "bottom": "50%"
+            });
+        }
+    </script>
+</body>
+</html>
