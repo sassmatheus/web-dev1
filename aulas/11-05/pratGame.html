@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 3 - 30/10/22</title>
+    <style>
+        .quadrados > *{
+            border: solid;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        .quadrados{
+            display: flex;
+        }
+        #red{
+            background-color: red;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #green{
+            background-color: green;
+        }
+        .selecionado{
+            position: absolute;
+            border: 3px solid yellow;
+            margin-left: 50%;
+            margin-top: 20%;
+        }
+        .bloqueia{
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Praticando 3</h1>
+    <h2>"Mini-game JS"</h2>
+    <h3>Instruções:</h3>
+    <h3>1. Clique em um dos quadrados coloridos</h3>
+    <h3>2. Depois use as teclas W A S D para movimentar os elementos para cima, esquerda, baixo e direita respectivamente.</h3>
+    <figure>
+        <img src="images/wasd.jpg" alt="mapa de teclas, setas e letras">
+    </figure>
+    <div class="quadrados">
+        <div class="quadrado r" id="red"></div>
+        <div class="quadrado b" id="blue"></div>
+        <div class="quadrado g" id="green"></div>
+    </div>
+    <br>
+    <a href="index.html">Voltar à página inicial</a>
+</body>
+<script>
+    var vermelho = document.getElementById('red');
+    var azul = document.getElementById('blue');
+    var verde = document.getElementById('green');
+    var anda = 15;
+    
+    document.querySelector('#red').onclick = () =>{
+            vermelho.classList.toggle('selecionado')
+            vermelho.style.left = 0
+            vermelho.style.top = 0
+            andaVermelho()   
+            document.querySelector('#blue').classList.toggle('bloqueia')
+            document.querySelector('#green').classList.toggle('bloqueia')
+    }
+
+    document.querySelector('#blue').onclick = () =>{
+            azul.classList.toggle('selecionado')
+            azul.style.left = 0
+            azul.style.top = 0
+            andaAzul()
+            document.querySelector('#red').classList.toggle('bloqueia')
+            document.querySelector('#green').classList.toggle('bloqueia')
+    }
+    
+    document.querySelector('#green').onclick = () =>{
+            verde.classList.toggle('selecionado')
+            verde.style.left = 0
+            verde.style.top = 0
+            andaVerde()
+            document.querySelector('#blue').classList.toggle('bloqueia')
+            document.querySelector('#red').classList.toggle('bloqueia')
+    }
+
+    function andaVermelho(){
+        window.addEventListener('keydown', (k) =>{
+            switch (k.code){
+                case 'ArrowLeft':
+                case 'KeyA':
+                    vermelho.style.left = parseInt(vermelho.style.left) - anda + 'px';
+                break;
+                case 'ArrowRight':
+                case 'KeyD':
+                    vermelho.style.left = parseInt(vermelho.style.left) + anda + 'px';
+                break;
+                case 'ArrowUp':
+                case 'KeyW':
+                    vermelho.style.top = parseInt(vermelho.style.top) - anda + 'px';
+                break;
+                case 'ArrowDown':
+                case 'KeyS':
+                    vermelho.style.top = parseInt(vermelho.style.top) + anda + 'px';
+                break;
+            }
+        })
+    }
+
+    function andaAzul(){
+        window.addEventListener('keydown', (k) =>{
+            switch (k.code){
+                case 'ArrowLeft':
+                case 'KeyA':
+                    azul.style.left = parseInt(azul.style.left) - anda + 'px';
+                break;
+                case 'ArrowRight':
+                case 'KeyD':
+                    azul.style.left = parseInt(azul.style.left) + anda + 'px';
+                break;
+                case 'ArrowUp':
+                case 'KeyW':
+                    azul.style.top = parseInt(azul.style.top) - anda + 'px';
+                break;
+                case 'ArrowDown':
+                case 'KeyS':
+                    azul.style.top = parseInt(azul.style.top) + anda + 'px';
+                break;
+            }
+        })
+    }
+
+    function andaVerde(){
+        window.addEventListener('keydown', (k) =>{
+            switch (k.code){
+                case 'ArrowLeft':
+                case 'KeyA':
+                    verde.style.left = parseInt(verde.style.left) - anda + 'px';
+                break;
+                case 'ArrowRight':
+                case 'KeyD':
+                    verde.style.left = parseInt(verde.style.left) + anda + 'px';
+                break;
+                case 'ArrowUp':
+                case 'KeyW':
+                    verde.style.top = parseInt(verde.style.top) - anda + 'px';
+                break;
+                case 'ArrowDown':
+                case 'KeyS':
+                    verde.style.top = parseInt(verde.style.top) + anda + 'px';
+                break;
+            }
+        })
+    }
+</script>
+</html>
