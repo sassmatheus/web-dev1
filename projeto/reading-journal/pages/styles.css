@@ -5,15 +5,17 @@ header{
     justify-content: space-between;
     width: 70%;
     margin: auto;
-    height: 50px;
+    max-height: 100px;
 }
 
 .listaHeader > li{
     padding: 2px;
     padding-bottom: 0;
+    margin-left: 15px;
+    border-bottom: 2px solid transparent;
 }
 
-.listaHeader > li:hover{
+.listaHeader > li:hover:not(.current){
     border-bottom: 2px dotted black;
     padding-top: 1px;
 }
@@ -24,16 +26,13 @@ body{
     position: relative;
     min-height: 87vh;
     padding-bottom: 5rem;
+    overflow-y: scroll;
 }
 
 ul{
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-}
-
-.listaHeader > li{
-    margin-left: 15px;
 }
 
 .listaMenu{
@@ -48,9 +47,90 @@ ul{
     margin-right: 5px;
     border-bottom: 2px solid transparent;
 }
-.current{
+
+.current > *{
     font-weight: bold;
     border-bottom: 2px groove black;
+}
+
+.linkHeader {
+    text-decoration: none;
+}
+
+a{
+    color: black;
+}
+
+a:not(.repo, .contato){
+    text-decoration: none;
+}
+
+.corpo{
+    max-width: 700px;
+    margin: auto;
+}
+
+.corpoabout{
+    max-width: 600px;
+    margin: auto;
+}
+
+.nome{
+    text-align: right;
+    font-size: 48px;
+    letter-spacing: 5px;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.meio{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+}
+
+.aboutme{
+    font-family: 'Balthazar', monospace;
+    font-size: 20px;
+    margin: 13px;
+}
+
+.foto{
+    border: 2px solid black;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.contato{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    margin: 13px;
+}
+
+.linkHeader {
+    text-decoration: none;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 6px;
+    font-family: Balthazar, serif;
+}
+
+.meio{
+    display: flex;
+    align-items: center;
+}
+
+.paragrafos{
+    text-align: justify;
+    font-family: consolas;
+    font-size: 18px;
+    margin: 13px;
+}
+p:not(.ola, .top){
+    text-indent: 40px;
 }
 
 .listaMenu > li:hover:not(.current){
@@ -58,13 +138,35 @@ ul{
     padding-top: 4px;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
-
 h2{
     text-align: center;
+}
+
+.andamento{
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.andamento > *{
+    text-align: center;
+    width: 220px;
+    align-content: center;
+    background-color:white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 7px black;
+}
+
+.andamento > *:hover{
+    box-shadow: 0 0 11px black;
+}
+
+figure{
+    margin: 0;
 }
 
 .livros{
@@ -83,12 +185,9 @@ h2{
     box-shadow: 0 0 7px black;
     display: flex;
 }
+
 .livros > *:hover{
     box-shadow: 0 0 11px black;
-}
-
-figure{
-    margin: 0;  
 }
 
 td{
@@ -106,6 +205,7 @@ table{
     height: fit-content;
     margin-left: 10px;
     align-self: center;
+    min-width: 200px;
 }
 
 .top{
@@ -130,7 +230,7 @@ footer{
     left: 10%;
     padding-top: 10px;
     text-align: center;
-    font-family: consolas, monospace;
+    font-family: monospace;
     font-size: 11pt;
     border-top: 1px solid gray;
 }
